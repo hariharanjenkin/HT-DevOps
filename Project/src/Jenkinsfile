@@ -56,21 +56,21 @@ pipeline {
             }
         }
 
-        stage('Terraform Init') {
-            steps {
-                dir('Project/terraform') {
-                    sh 'terraform init'
-                }
-            }
-        }
+        // stage('Terraform Init') {
+        //     steps {
+        //         dir('Project/terraform') {
+        //             sh 'terraform init'
+        //         }
+        //     }
+        // }
 
-        stage('Terraform Apply') {
-            steps {
-                dir('Project/terraform') {
-                    sh 'terraform apply -auto-approve'
-                }
-            }
-        }
+        // stage('Terraform Apply') {
+        //     steps {
+        //         dir('Project/terraform') {
+        //             sh 'terraform apply -auto-approve'
+        //         }
+        //     }
+        // }
 
         stage('Deploy Container') {
             steps {
